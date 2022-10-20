@@ -88,7 +88,25 @@ public class Job {
 
     @Override
     public String toString() {
-        return "\n" +
+
+        String DNA = "Data not available ";
+        if (this.name.equals("")) {
+            this.name = DNA;
+        }
+        if (employer.getValue().equals("")) {
+            this.employer.setValue(DNA);
+        }
+        if (location.getValue().equals("")) {
+            this.location.setValue(DNA);
+        }
+        if (positionType.getValue().equals("")) {
+            this.positionType.setValue(DNA);
+        }
+        if (coreCompetency.getValue().equals("")) {
+            this.coreCompetency.setValue(DNA);
+        }
+
+            return "\n" +
                 "ID: " + id +
                 "\nName: " + name +
                 "\nEmployer: " + employer.getValue() +
